@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hwalima Digital - NUST CCE Collaboration</title>
+    <link rel="icon" type="image/svg+xml" href="Assets/icon dark backgroud.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="light-mode">
+    <div class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="Assets/icon light background.svg" alt="Hwalima Digital" class="logo light-logo">
+            <img src="Assets/icon dark backgroud.svg" alt="Hwalima Digital" class="logo dark-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#welcome" class="nav-link">Welcome</a></li>
+                <li><a href="#introduction" class="nav-link">Our Story</a></li>
+                <li><a href="#nust-position" class="nav-link">NUST CCE Excellence</a></li>
+                <li><a href="#hwalima-strength" class="nav-link">Why Hwalima Digital</a></li>
+                <li><a href="#proposal" class="nav-link">Collaboration Vision</a></li>
+                <li><a href="#skills" class="nav-link">Technical Expertise</a></li>
+                <li><a href="#partners" class="nav-link">Strategic Partners</a></li>
+                <li><a href="#next-stages" class="nav-link">Next Stages</a></li>
+                <li><a href="#thank-you" class="nav-link">Contact Us</a></li>
+                <li class="logout-item">
+                    <a href="#" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="sidebar-toggle" class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <button id="floating-sidebar-toggle" class="floating-sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <main>
+        <section id="welcome" class="page active">
+            <div class="floating-elements">
+                <div class="game-shape triangle"></div>
+                <div class="game-shape circle"></div>
+                <div class="game-shape square"></div>
+                <div class="game-shape cross"></div>
+            </div>
+            <div id="particles-js"></div>
+            <div class="content-wrapper">
+                <div class="logos-container">
+                    <img src="Assets/icon light background.svg" alt="Hwalima Digital" class="company-logo light-logo">
+                    <img src="Assets/icon dark backgroud.svg" alt="Hwalima Digital" class="company-logo dark-logo">
+                    <div class="plus-symbol">+</div>
+                    <img src="Assets/nust cce logo.png" alt="NUST CCE" class="nust-logo">
+                </div>
+                <h1 class="title">Innovative Collaboration Proposal</h1>
+                <p class="subtitle">Transforming Corporate Training Through Technology</p>
+            </div>
+        </section>
+
+        <section id="introduction" class="page">
+            <div class="content-wrapper">
+                <h2>Our Story</h2>
+                <div class="video-container">
+                    <video id="story-video" controls autoplay muted>
+                        <source src="Assets/our story.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="nust-position" class="page">
+            <div class="content-wrapper">
+                <h2>NUST CCE: Leading Innovation in Corporate Education</h2>
+                <div class="proposal-cards">
+                    <div class="card feature-card excellence-card" data-excellence="academic">
+                        <i class="fas fa-university"></i>
+                        <h3>Academic Excellence</h3>
+                        <p>Transform corporate education through:</p>
+                        <ul class="feature-list">
+                            <li>Premier institution within NUST</li>
+                            <li>High-quality corporate training</li>
+                            <li>Professional development expertise</li>
+                            <li>Industry-leading instructors</li>
+                            <li>Proven educational methodologies</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card excellence-card" data-excellence="industry">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Industry Connections</h3>
+                        <p>Strategic advantages include:</p>
+                        <ul class="feature-list">
+                            <li>Strong corporate partnerships</li>
+                            <li>Zimbabwe business landscape expertise</li>
+                            <li>Industry-aligned curriculum</li>
+                            <li>Corporate training track record</li>
+                            <li>Extensive business network</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card excellence-card" data-excellence="market">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Market Leadership</h3>
+                        <p>Pioneering digital education through:</p>
+                        <ul class="feature-list">
+                            <li>Innovation in education delivery</li>
+                            <li>Digital transformation focus</li>
+                            <li>Market-driven solutions</li>
+                            <li>Continuous improvement culture</li>
+                            <li>Future-ready training programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Excellence Modals Container -->
+            <div class="excellence-modal-container">
+                <!-- Academic Excellence Modal -->
+                <div class="excellence-modal" id="modal-academic">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-excellence" aria-label="Previous Excellence">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-excellence" aria-label="Next Excellence">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <h2>Academic Excellence</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Premier Institution</h3>
+                                <p>NUST CCE stands as a beacon of academic excellence within the National University of Science and Technology.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Corporate Training</h3>
+                                <p>Delivering high-quality corporate training programs that meet industry standards and exceed expectations.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Expert Faculty</h3>
+                                <p>Industry-leading instructors with extensive experience in professional development and corporate education.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Connections Modal -->
+                <div class="excellence-modal" id="modal-industry">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-excellence" aria-label="Previous Excellence">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-excellence" aria-label="Next Excellence">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <h2>Industry Connections</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Corporate Partnerships</h3>
+                                <p>Strong relationships with leading corporations across Zimbabwe and beyond.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Local Expertise</h3>
+                                <p>Deep understanding of the Zimbabwe business landscape and corporate training needs.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Industry Network</h3>
+                                <p>Extensive network of industry partners and professional connections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Leadership Modal -->
+                <div class="excellence-modal" id="modal-market">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-excellence" aria-label="Previous Excellence">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-excellence" aria-label="Next Excellence">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <h2>Market Leadership</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Innovation Leadership</h3>
+                                <p>Pioneering new approaches to education delivery and digital transformation.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Market Focus</h3>
+                                <p>Developing solutions driven by market needs and industry trends.</p>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Future Vision</h3>
+                                <p>Creating future-ready training programs that anticipate industry evolution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hwalima-strength" class="page">
+            <div class="content-wrapper">
+                <h2>Hwalima Digital: Your Digital Transformation Partner</h2>
+                <div class="proposal-cards">
+                    <div class="card feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Microsoft Education Partner</h3>
+                        <p>Enterprise solutions including:</p>
+                        <ul class="feature-list">
+                            <li>Microsoft Teams integration</li>
+                            <li>Azure cloud infrastructure</li>
+                            <li>Enterprise-grade security</li>
+                            <li>Microsoft 365 ecosystem</li>
+                            <li>Global best practices</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gamification Expertise</h3>
+                        <p>Revolutionary learning through:</p>
+                        <ul class="feature-list">
+                            <li>Interactive learning mechanics</li>
+                            <li>Engagement-driven design</li>
+                            <li>Progress tracking systems</li>
+                            <li>Reward-based learning</li>
+                            <li>Competitive elements</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Advanced LMS Solutions</h3>
+                        <p>Proven platform features:</p>
+                        <ul class="feature-list">
+                            <li>Scalable architecture</li>
+                            <li>Custom portal development</li>
+                            <li>Analytics dashboard</li>
+                            <li>Mobile-first design</li>
+                            <li>API integration capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proposal" class="page">
+            <div class="content-wrapper">
+                <h2>Transformative Collaboration Vision</h2>
+                <div class="proposal-cards">
+                    <div class="card feature-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gamified Corporate Training</h3>
+                        <p>Transform traditional corporate training through:</p>
+                        <ul class="feature-list">
+                            <li>Interactive learning scenarios</li>
+                            <li>Achievement-based progression</li>
+                            <li>Real-time performance analytics</li>
+                            <li>Competitive learning elements</li>
+                            <li>Customized corporate challenges</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Enterprise LMS Platform</h3>
+                        <p>Comprehensive learning solution featuring:</p>
+                        <ul class="feature-list">
+                            <li>Customized corporate portals</li>
+                            <li>Advanced analytics dashboard</li>
+                            <li>Integration with HR systems</li>
+                            <li>Mobile-first learning experience</li>
+                            <li>Automated certification</li>
+                        </ul>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Expected Outcomes</h3>
+                        <ul class="feature-list">
+                            <li>Increased learner engagement by 300%</li>
+                            <li>Improved completion rates</li>
+                            <li>Enhanced knowledge retention</li>
+                            <li>Measurable ROI for clients</li>
+                            <li>Market leadership in digital learning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chibi-container">
+                    <img src="Chibi/chibi12-Photoroom.png" alt="Chibi Character 1" class="chibi-image left-chibi">
+                    <img src="Chibi/chibi11-Photoroom.png" alt="Chibi Character 2" class="chibi-image center-chibi">
+                    <img src="Chibi/chibi8-Photoroom.png" alt="Chibi Character 3" class="chibi-image right-chibi">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page">
+            <div class="content-wrapper">
+                <h2>Technical Expertise</h2>
+                <div class="skills-grid">
+                    <!-- Front End Group -->
+                    <div class="skill-category wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Front End</h3>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill-item" data-skill="HTML">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS/SASS">
+                                <i class="fab fa-sass"></i>
+                                <span>CSS/SASS</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="React/Angular">
+                                <i class="fab fa-react"></i>
+                                <span>React/Angular</span>
+                            </div>
+                            <div class="skill-item" data-skill="jQuery">
+                                <i class="fas fa-code-branch"></i>
+                                <span>jQuery</span>
+                            </div>
+                            <div class="skill-item" data-skill="Bootstrap">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Websites/Cloud Group -->
+                    <div class="skill-category wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="category-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Websites/Cloud</h3>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill-item" data-skill="WordPress">
+                                <i class="fab fa-wordpress"></i>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="skill-item" data-skill="PHP">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item" data-skill="Drupal">
+                                <i class="fab fa-drupal"></i>
+                                <span>Drupal</span>
+                            </div>
+                            <div class="skill-item" data-skill="Azure">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Azure</span>
+                            </div>
+                            <div class="skill-item" data-skill="Docker">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item" data-skill="AWS">
+                                <i class="fab fa-aws"></i>
+                                <span>AWS Cloud</span>
+                            </div>
+                            <div class="skill-item" data-skill="Salesforce">
+                                <i class="fas fa-cloud"></i>
+                                <span>Salesforce</span>
+                            </div>
+                            <div class="skill-item" data-skill="Digital Ocean">
+                                <i class="fas fa-water"></i>
+                                <span>Digital Ocean</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Design/Comms Group -->
+                    <div class="skill-category wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="category-header">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>Game Design/Comms</h3>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill-item" data-skill="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item" data-skill="Asana">
+                                <i class="fas fa-tasks"></i>
+                                <span>Asana</span>
+                            </div>
+                            <div class="skill-item" data-skill="Click up">
+                                <i class="fas fa-check-double"></i>
+                                <span>Click up</span>
+                            </div>
+                            <div class="skill-item" data-skill="Jira">
+                                <i class="fab fa-jira"></i>
+                                <span>Jira</span>
+                            </div>
+                            <div class="skill-item" data-skill="Unity">
+                                <i class="fas fa-cube"></i>
+                                <span>Unity Engine</span>
+                            </div>
+                            <div class="skill-item" data-skill="Blender">
+                                <i class="fas fa-cube"></i>
+                                <span>Blender</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Group -->
+                    <div class="skill-category wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="category-header">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>UI/UX</h3>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill-item" data-skill="Figma">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-item" data-skill="Adobe XD">
+                                <i class="fab fa-adobe"></i>
+                                <span>Adobe XD</span>
+                            </div>
+                            <div class="skill-item" data-skill="Sketch">
+                                <i class="fas fa-pencil-ruler"></i>
+                                <span>Sketch</span>
+                            </div>
+                            <div class="skill-item" data-skill="Photoshop">
+                                <i class="fas fa-image"></i>
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="skill-item" data-skill="Canva">
+                                <i class="fas fa-palette"></i>
+                                <span>Canva</span>
+                            </div>
+                            <div class="skill-item" data-skill="Invision">
+                                <i class="fas fa-eye"></i>
+                                <span>Invision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="page">
+            <div class="content-wrapper">
+                <h2>Our Partners</h2>
+                <div class="partners-grid">
+                    <img src="partners/microsoft-education-partner-nottingham-to-use_BC-996x675.webp" alt="Microsoft Education Partner" class="partner-logo">
+                    <img src="partners/articulate.png" alt="Articulate 360" class="partner-logo">
+                    <img src="partners/captivate.png" alt="Adobe Captivate" class="partner-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="next-stages" class="page">
+            <div class="content-wrapper">
+                <h2>Next Stages</h2>
+                <div class="stages-container">
+                    <div class="stage-card" data-stage="planning" data-wow-delay="0.2s">
+                        <div class="stage-header">
+                            <span class="stage-number">01</span>
+                            <h3>Project Planning</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul class="stage-list">
+                                <li>Detailed project scope definition</li>
+                                <li>Timeline and milestone establishment</li>
+                                <li>Resource allocation planning</li>
+                                <li>Risk assessment and mitigation strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="stage-card" data-stage="development" data-wow-delay="0.4s">
+                        <div class="stage-header">
+                            <span class="stage-number">02</span>
+                            <h3>Development Phase</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul class="stage-list">
+                                <li>Technical architecture setup</li>
+                                <li>Core functionality development</li>
+                                <li>Integration with existing systems</li>
+                                <li>Regular progress reviews and updates</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="stage-card" data-stage="quality" data-wow-delay="0.6s">
+                        <div class="stage-header">
+                            <span class="stage-number">03</span>
+                            <h3>Quality Assurance</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul class="stage-list">
+                                <li>Comprehensive testing protocols</li>
+                                <li>Performance optimization</li>
+                                <li>Security audits and improvements</li>
+                                <li>User acceptance testing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="stage-card" data-stage="deployment" data-wow-delay="0.8s">
+                        <div class="stage-header">
+                            <span class="stage-number">04</span>
+                            <h3>Deployment & Training</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul class="stage-list">
+                                <li>Phased deployment strategy</li>
+                                <li>Staff training programs</li>
+                                <li>Documentation and knowledge transfer</li>
+                                <li>Post-deployment support plan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Container -->
+            <div class="stage-modal-container">
+                <div class="stage-modal" id="modal-planning">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-stage" aria-label="Previous Stage">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-stage" aria-label="Next Stage">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <span class="modal-number">01</span>
+                            <h2>Project Planning</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Key Activities</h3>
+                                <ul>
+                                    <li>Comprehensive project scope documentation</li>
+                                    <li>Detailed timeline creation with key milestones</li>
+                                    <li>Resource allocation and team structure planning</li>
+                                    <li>Risk assessment and mitigation strategy development</li>
+                                    <li>Budget planning and cost estimation</li>
+                                </ul>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Deliverables</h3>
+                                <ul>
+                                    <li>Project charter and scope document</li>
+                                    <li>Detailed project timeline</li>
+                                    <li>Resource allocation matrix</li>
+                                    <li>Risk management plan</li>
+                                    <li>Budget and cost breakdown</li>
+                                </ul>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Success Metrics</h3>
+                                <ul>
+                                    <li>Stakeholder approval of project plan</li>
+                                    <li>Clear milestone definitions</li>
+                                    <li>Resource availability confirmation</li>
+                                    <li>Risk mitigation strategies in place</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-modal" id="modal-development">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-stage" aria-label="Previous Stage">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-stage" aria-label="Next Stage">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <span class="modal-number">02</span>
+                            <h2>Development Phase</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Technical Implementation</h3>
+                                <ul>
+                                    <li>System architecture setup and configuration</li>
+                                    <li>Core functionality development sprints</li>
+                                    <li>Integration with existing systems</li>
+                                    <li>Regular code reviews and quality checks</li>
+                                    <li>Performance optimization</li>
+                                </ul>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Milestones</h3>
+                                <ul>
+                                    <li>Architecture approval</li>
+                                    <li>Sprint completion checkpoints</li>
+                                    <li>Integration testing success</li>
+                                    <li>Performance benchmarks achieved</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-modal" id="modal-quality">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-stage" aria-label="Previous Stage">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-stage" aria-label="Next Stage">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <span class="modal-number">03</span>
+                            <h2>Quality Assurance</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Testing Protocols</h3>
+                                <ul>
+                                    <li>Unit testing implementation</li>
+                                    <li>Integration testing procedures</li>
+                                    <li>System testing methodology</li>
+                                    <li>Performance testing benchmarks</li>
+                                    <li>Security testing protocols</li>
+                                </ul>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Quality Metrics</h3>
+                                <ul>
+                                    <li>Code coverage requirements</li>
+                                    <li>Performance benchmarks</li>
+                                    <li>Security compliance standards</li>
+                                    <li>User acceptance criteria</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-modal" id="modal-deployment">
+                    <div class="modal-content">
+                        <button class="modal-nav prev-stage" aria-label="Previous Stage">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-nav next-stage" aria-label="Next Stage">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="modal-header">
+                            <span class="modal-number">04</span>
+                            <h2>Deployment & Training</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h3>Deployment Strategy</h3>
+                                <ul>
+                                    <li>Phased rollout plan</li>
+                                    <li>Backup and rollback procedures</li>
+                                    <li>System monitoring setup</li>
+                                    <li>Performance tracking implementation</li>
+                                </ul>
+                            </div>
+                            <div class="modal-section">
+                                <h3>Training Program</h3>
+                                <ul>
+                                    <li>User training materials development</li>
+                                    <li>Training session scheduling</li>
+                                    <li>Knowledge transfer documentation</li>
+                                    <li>Support team preparation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="thank-you" class="page">
+            <div id="thank-you-particles" class="particles-background"></div>
+            <div class="content-wrapper">
+                <h2>Contact Information</h2>
+                <div class="contact-cards-container">
+                    <div class="contact-card" data-modal="email-modal">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Contacts</h3>
+                        <div class="contact-details">
+                            <p>info@hwalima.digital</p>
+                            <p>support@hwalima.digital</p>
+                        </div>
+                        <div class="contact-socials">
+                            <button class="copy-btn" title="Copy Email">
+                                <i class="fas fa-copy"></i> Copy Emails
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-card" data-modal="phone-modal">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Contacts</h3>
+                        <div class="contact-details">
+                            <p>+27 78 542 5978</p>
+                            <p>+263 78 398 2747</p>
+                        </div>
+                        <div class="contact-socials">
+                            <button class="copy-btn" title="Copy Phone Numbers">
+                                <i class="fas fa-copy"></i> Copy Numbers
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-card" data-modal="location-modal">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Office Locations</h3>
+                        <div class="contact-details">
+                            <p>Filabusi, Zimbabwe</p>
+                            <p>Midrand, South Africa</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modals -->
+        <div id="email-modal" class="contact-modal">
+            <div class="contact-modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2>Email Contacts</h2>
+                <div class="modal-details">
+                    <div class="modal-contact-group">
+                        <h3>General Inquiries</h3>
+                        <p>info@hwalima.digital</p>
+                        <button class="copy-btn" data-copy="info@hwalima.digital">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="modal-contact-group">
+                        <h3>Technical Support</h3>
+                        <p>support@hwalima.digital</p>
+                        <button class="copy-btn" data-copy="support@hwalima.digital">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="phone-modal" class="contact-modal">
+            <div class="contact-modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h2>Phone Contacts</h2>
+                <div class="modal-details">
+                    <div class="modal-contact-group">
+                        <h3>South Africa</h3>
+                        <p>+27 78 542 5978</p>
+                        <button class="copy-btn" data-copy="+27 78 542 5978">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="modal-contact-group">
+                        <h3>Zimbabwe</h3>
+                        <p>+263 78 398 2747</p>
+                        <button class="copy-btn" data-copy="+263 78 398 2747">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="location-modal" class="contact-modal">
+            <div class="contact-modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h2>Office Locations</h2>
+                <div class="modal-details">
+                    <div class="modal-contact-group">
+                        <h3>Bulawayo</h3>
+                        <p>Zimbabwe</p>
+                        <a href="#" class="map-link">
+                            <i class="fas fa-map"></i> View on Map
+                        </a>
+                    </div>
+                    <div class="modal-contact-group">
+                        <h3>Cape Town</h3>
+                        <p>South Africa</p>
+                        <a href="#" class="map-link">
+                            <i class="fas fa-map"></i> View on Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Check if user is authenticated
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.replace('login.html');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
